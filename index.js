@@ -15,6 +15,9 @@ dotenv.config();
 // Routes
 app.use('/posts', postRoutes);
 app.use('/user', userRouter);
+app.get('/', (req, res) => {
+   res.send('APP IS RUNNING');
+});
 
 // Database & Server
 const CONNECTION_URL = process.env.MONGO_URL;
